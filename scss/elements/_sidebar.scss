@@ -1,0 +1,39 @@
+.sidebar {
+
+
+    ul {
+        list-style-type: none;
+
+        li {
+
+            margin-bottom: 50px;
+            border-left: 2px solid transparent;
+
+            &:first-of-type {
+                margin-top: 50px;
+                border-left: 2.5px solid #7EBF88;
+            }
+
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
+
+            a {
+                
+                img {
+                    max-height: 37.5px;
+                    width: auto;
+                    opacity: .75;
+
+                    @media screen and (max-width: 320px) {
+                        max-height: 27.5px;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

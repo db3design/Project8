@@ -1,0 +1,92 @@
+.nav {
+    @include flexRow;
+    @include centerFlex;
+    @include smallSidePadding;
+
+    .logo { 
+        
+        @media screen and (min-width: $small) {
+            flex: 1 50%;
+        }
+
+        @media screen and (min-width: $medium) {
+            flex: 1 65%;
+        }
+
+        @media screen and (min-width: $large) {
+            flex: 1 75%;  
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+.notificationContainer {
+        @media screen and (min-width: $small) {
+            flex: 1 15%;
+        }
+
+        @media screen and (min-width: $medium) {
+            flex: 1 10%;
+        }
+
+        @media screen and (min-width: $large) {
+            flex: 1 5%;  
+        }
+
+        @include displayFlex;        
+        
+        .bell {
+            height: 25px;
+            width: auto;
+            opacity: .7;
+            transition: all .5s .2s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: "";
+            background-color: #7EBF88;
+            border-radius: 50px;
+            height: 7.5px;
+            width: 7.5px;
+        }
+    }
+    .profileContainer {
+        @media screen and (min-width: $small) {
+            flex: 1 30%;
+        }
+
+        @media screen and (min-width: $medium) {
+            flex: 1 25%;
+        }
+
+        @media screen and (min-width: $large) {
+            flex: 1 20%;  
+        }
+
+        @include inlineFlex;
+
+        img {
+            border-radius: 50px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            @include smallMarginLeft;
+            @include smallPaddingRight;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

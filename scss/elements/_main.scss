@@ -1,0 +1,393 @@
+.main {
+    .row1 {
+        @include flexColumn;
+        
+
+        .main-header {
+            @include fullWidth;
+            @include displayFlex;
+            @include smallVerticalMargin;
+
+            @media screen and (min-width: $small) {
+                flex-direction: column;
+                align-items: center;
+            }
+            @media screen and (min-width: $medium) {
+                @include flexRow;
+             }
+    
+            .headline {
+                @include threeQuarters;
+
+                @media screen and (min-width: $small) {
+                    margin-bottom: 15px;
+                }
+            }
+            .main-header-search {
+                @include oneQuarter;
+
+                @media screen and (min-width: $medium) {
+                   @include flexRow;
+                 }
+
+                input {
+                    margin-right: -30px;
+                }
+                button {
+                    @include smallRadius;
+                    @include noBorderNoOutline;
+                    background-color: $color-3-hex;
+                    padding: 10px 0;
+                    padding-right: 15px;
+
+                    i {
+                        @include smallPaddingRightPx;
+                    }
+                }
+            }
+        }
+
+        .alert {
+            @include fullWidth;
+            @include smallVerticalMargin;
+            @include smallRadius;
+            @include smallMarginBottom;
+            padding: 15px 2.5%;
+            background-color: $color-1-hex;
+            color: $color-5-hex;
+
+            .alert-banner {
+               @include displayFlex;
+
+               @media screen and (min-width: $small) {
+                    
+                }
+
+                .message {
+                    flex: 1 97%;
+                }
+
+                .alert-banner-close {
+                    flex: 1 3%;
+                    @include flexEnd;
+                    margin-left: auto;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+
+
+    .traffic {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @include fullWidth;
+
+        .text-1 {
+            @include smallMarginBottom;
+        }
+    }
+
+
+
+    .daily {
+        @include displayFlex;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        .widget-container-half {
+            @include flexHalf;
+            @include smallSidePadding;
+
+            h3 {
+                @include smallMarginBottom;
+            }
+
+            @media screen and (min-width: $small) {
+                flex: 1 100%;
+             }
+        }
+
+        @media screen and (min-width: $small) {
+           flex-direction: column;
+        }
+
+        @media screen and (min-width: $medium) {
+            flex-direction: row;
+            margin-bottom: 0;
+            flex: 1 50%;
+         }
+    }
+
+
+
+    section.social {
+        @include displayFlex;
+        @include centerFlex;
+        @include smallSidePadding;
+        margin-top: 50px * 2;
+        margin-bottom: 50px * 2;
+
+        @media screen and (min-width: $small) {
+            flex-direction: column;
+         }
+         @media screen and (min-width: $medium) {
+            flex-direction: row;
+         }
+
+        .social-container {
+            flex: 1 30%;
+            @include displayFlex;
+            border: 1px solid $color-1-hex;
+            padding: 35px 2.5%;
+            margin-right: 3%;
+            border-radius: 10px;
+            
+            @media screen and (min-width: $small) {
+                width: 90%;
+                margin-bottom: 25px;
+            }
+
+            .social-image {
+                @include superCenterFlex;
+                @include largeRadius;
+                height: 60px;
+                width: 60px;
+                background-color: $color-1-hex;
+                margin-right: 25px;
+                
+                svg {
+                    @include centerFlex;
+                    height: 30px;
+                    width: 30px;
+                    fill: $color-5-hex;
+                }
+            }
+
+            .social-text {
+                @include threeQuarters;
+            }
+        }
+    }
+
+
+
+
+    .row5 {
+
+        @include displayFlex;
+        @include smallSidePadding;
+
+        @media screen and (min-width: $small) {
+            flex-direction: column;
+         }
+         @media screen and (min-width: $medium) {
+            flex-direction: row;
+            margin-bottom: 50px;
+         }
+
+        section.members {
+            @include flexHalf;
+           @include flexColumn;
+           margin-bottom: 50px * 2;
+
+           .text-1 {
+               margin-bottom: 25px;
+           }
+            
+    
+            .members-container {
+                @include flexRow;
+                @include centerFlex;
+                @include smallSidePadding;
+                @include microMarginBottom;
+                padding-right: 10%;
+
+                @media screen and (min-width: $small) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-right: 2.5%;
+                    margin-bottom: 25px;
+                 }
+    
+                img {
+                    max-height: 35px;
+                    border-radius: 50px;
+                    margin-right: 25px;
+                }
+
+                .date {
+                    @include flexEnd;
+                    margin-left: auto;
+
+                    @media screen and (min-width: $small) {
+                       margin-left: 2.5%;
+                       align-self: flex-start;
+                     }
+                }
+            }
+        }
+        section.activity {
+            @include flexHalf;
+            @include flexColumn;
+
+            .text-1 {
+                margin-bottom: 25px;
+            }
+            
+
+            .activity-container {
+                @include flexRow;
+                @include centerFlex;
+                @include smallSidePadding;
+                @include microMarginBottom;
+                padding-right: 10%;
+
+                @media screen and (min-width: $small) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-right: 2.5%;
+                    margin-bottom: 25px;
+                 }
+
+                img {
+                    max-height: 35px;
+                    border-radius: 50px;
+                    margin-right: 25px;
+                }
+    
+                .activity-content {
+                    @include flexColumn;
+                }
+    
+                i {
+                    @include flexEnd;
+                    margin-left: auto;
+                    font-size: 1.5em;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+
+
+    .row6 {
+        @include displayFlex;
+        @include smallSidePadding;
+        margin-bottom: 50px;
+
+        @media screen and (min-width: $small) {
+            flex-direction: column;
+         }
+         @media screen and (min-width: $medium) {
+            flex-direction: row;
+         }
+
+        .message {
+           @include flexHalf;
+           @include smallSidePadding;
+           @include microMarginBottom;
+            padding-right: 5%;
+
+            @media screen and (min-width: $small) {
+                margin-bottom: 50px;
+                margin-top: 50px;
+             }
+             @media screen and (min-width: $medium) {
+                margin-bottom: 0px;
+                margin-top: 0px;
+             }
+             @media screen and (min-width: $large) {
+                margin-bottom: 0px;
+                margin-top: 0px;
+             }
+            
+            .text-1 {
+                margin-bottom: 25px;
+            }
+
+            form {
+                @include flexColumn;
+
+                input {
+                   @include fullWidth;
+                   @include microMarginBottom;
+                }
+
+                textarea {
+                   @include fullWidth;
+                   @include microMarginBottom;
+                }
+
+                button {
+                    @include fullWidth;
+                    @include smallRadius;
+                    @include noBorderNoOutline;
+                    background-color: $color-1-hex;
+                    color: $color-5-hex;
+                    padding: 10px 25px;
+                    transition: all .5s .25s;
+
+                    &:hover {
+                        opacity: .75;
+                    }
+                }
+            }
+        }
+
+        .settings {
+            @include flexHalf;
+            @include flexColumn;
+            @include smallSidePadding;
+            @include microMarginBottom;
+            padding-right: 5%;
+
+            h3 {
+                margin-bottom: 25px;
+            }
+
+            .toggle {
+                @include flexRow;
+                @include centerFlex;
+                margin-bottom: 15px;
+
+                .switch {
+                    align-self: flex-end;
+                    margin-left: auto;
+                }
+            }
+           
+            select {
+                @include fullWidth;
+                max-height: 35px;
+                margin-bottom: 35px;
+            }
+
+            button {
+                @include noBorderNoOutline;
+                @include smallRadius;
+                background-color: $color-1-hex;
+                color: $color-5-hex;
+                padding: 10px 25px;
+                transition: all .5s .25s;
+                margin-right: 15px;
+
+                &.button-disabled {
+                    background-color: $color-3-hex;
+                    color: $color-1-hex;
+                }
+
+                &:hover {
+                    opacity: .75;
+                }
+            }
+        }
+    }
+}

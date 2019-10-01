@@ -1,0 +1,56 @@
+// These are mixins that will control the flex positioning of elements on the page
+
+@mixin displayFlex {
+    display: flex;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+@mixin fullWidth {
+    flex: 1 100%;
+}
+@mixin threeQuarters {
+    flex: 1 75%;
+}
+@mixin oneQuarter {
+    flex: 1 25%;
+}
+@mixin flexOne {
+    flex: 1 10%;
+}
+
+@mixin flexNine {
+    flex: 1 90%;
+}
+@mixin flexHalf {
+    flex: 1 50%;
+}
+@mixin flexThird {
+    flex: 1 33%;
+}
+@mixin flexStart {
+    align-self: flex-start;
+}
+@mixin flexEnd {
+    align-self: flex-end;
+}
+@mixin centerFlex {
+    align-items: center;
+}
+@mixin superCenterFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin inlineFlex {
+    display: inline-flex;
+    align-items: center;
+}
