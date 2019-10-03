@@ -246,12 +246,12 @@
         <section class="message">
             <h3 class="text-1">Message User</h3>
             
-            <form class="widget-container">
+            <form name="messageForm"  class="widget-container">
                 <input type="text" placeholder="Search for user"
-            class="form-field" id="userField">
+            class="form-field" id="userField" required>
                 <textarea placeholder="Message for user" class="form-area"
-            id= "messageField" ></textarea>
-                <button class="button-primary" id="send">Send</button>
+            id= "messageField" required></textarea>
+                <button class="button-primary" id="send" onclick="successMessage()">Send</button>
             </form>
         </section>
 

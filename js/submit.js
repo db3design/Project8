@@ -1,5 +1,5 @@
 var button = document.getElementById('send');
 
-button.onclick = function () {
+function successMessage () {
     alert('Your Message Has Been Sent');
 }

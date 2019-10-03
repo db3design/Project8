@@ -361,6 +361,13 @@ input:checked + .slider:before {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  * {
+    border: none !important;
+    overflow: hidden;
+  }
+}
+
 .main .row1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +386,7 @@ input:checked + .slider:before {
   display: -ms-flexbox;
   display: flex;
   margin: 25px 0;
+  padding: 10px 0;
 }
 
 @media screen and (min-width: 320px) {
@@ -407,8 +415,14 @@ input:checked + .slider:before {
 
 .main .row1 .main-header .headline {
   -webkit-box-flex: 1;
-      -ms-flex: 1 75%;
-          flex: 1 75%;
+      -ms-flex: 1 15%;
+          flex: 1 15%;
+  padding-bottom: 17.5px;
+  position: relative;
+  top: 5px;
+  padding-right: 25px;
+  margin: 0;
+  border-right: 1px solid lightgrey;
 }
 
 @media screen and (min-width: 320px) {
@@ -419,8 +433,13 @@ input:checked + .slider:before {
 
 .main .row1 .main-header .main-header-search {
   -webkit-box-flex: 1;
-      -ms-flex: 1 25%;
-          flex: 1 25%;
+      -ms-flex: 1 85%;
+          flex: 1 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
 }
 
 @media screen and (min-width: 768px) {
@@ -436,6 +455,7 @@ input:checked + .slider:before {
 }
 
 .main .row1 .main-header .main-header-search input {
+  margin-left: auto;
   margin-right: -30px;
 }
 
@@ -505,8 +525,10 @@ input:checked + .slider:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  border-top: .5px solid lightgrey;
+  border-bottom: .5px solid lightgrey;
 }
 
 .main .daily .widget-container-half {
@@ -514,10 +536,17 @@ input:checked + .slider:before {
       -ms-flex: 1 50%;
           flex: 1 50%;
   padding: 0 2.5%;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
 }
 
 .main .daily .widget-container-half h3 {
   margin-bottom: 25px;
+}
+
+.main .daily .widget-container-half:first-of-type {
+  border-right: .5px solid lightgrey;
 }
 
 @media screen and (min-width: 320px) {
@@ -558,8 +587,7 @@ input:checked + .slider:before {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2.5%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding: 7.5% 0;
 }
 
 @media screen and (min-width: 320px) {
@@ -587,7 +615,7 @@ input:checked + .slider:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #7477BF;
+  border: 1px solid lightgrey;
   padding: 35px 2.5%;
   margin-right: 3%;
   border-radius: 10px;
@@ -641,6 +669,9 @@ input:checked + .slider:before {
   display: -ms-flexbox;
   display: flex;
   padding: 0 2.5%;
+  padding-top: 5%;
+  border-bottom: .5px solid lightgrey;
+  border-top: .5px solid lightgrey;
 }
 
 @media screen and (min-width: 320px) {
@@ -674,6 +705,8 @@ input:checked + .slider:before {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 100px;
+  padding: 0 5%;
+  border-right: .5px solid lightgrey;
 }
 
 .main .row5 section.members .text-1 {
@@ -730,6 +763,14 @@ input:checked + .slider:before {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .main .row5 section.members .members-container .date {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-left: auto;
+  }
+}
+
 .main .row5 section.activity {
   -webkit-box-flex: 1;
       -ms-flex: 1 50%;
@@ -741,6 +782,7 @@ input:checked + .slider:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 5%;
 }
 
 .main .row5 section.activity .text-1 {
@@ -807,6 +849,7 @@ input:checked + .slider:before {
   display: flex;
   padding: 0 2.5%;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 320px) {
@@ -834,6 +877,8 @@ input:checked + .slider:before {
   padding: 0 2.5%;
   margin-bottom: 15px;
   padding-right: 5%;
+  padding: 0 5%;
+  border-right: .5px solid lightgrey;
 }
 
 @media screen and (min-width: 320px) {
@@ -917,6 +962,8 @@ input:checked + .slider:before {
   padding: 0 2.5%;
   margin-bottom: 15px;
   padding-right: 5%;
+  padding: 0 5%;
+  border-right: .5px solid lightgrey;
 }
 
 .main .row6 .settings h3 {

@@ -1,3 +1,9 @@
+* {
+    @media screen and (max-width: 768px) {
+        border: none !important;
+        overflow: hidden;
+    }
+}
 .main {
     .row1 {
         @include flexColumn;
@@ -7,6 +13,7 @@
             @include fullWidth;
             @include displayFlex;
             @include smallVerticalMargin;
+            padding: 10px 0;
 
             @media screen and (min-width: $small) {
                 flex-direction: column;
@@ -17,20 +24,30 @@
              }
     
             .headline {
-                @include threeQuarters;
+                flex: 1 15%;
+                padding-bottom: 17.5px;
+                position: relative;
+                top: 5px;
+                padding-right: 25px;
+                margin: 0;
+                border-right: 1px solid lightgrey;
 
                 @media screen and (min-width: $small) {
                     margin-bottom: 15px;
                 }
             }
             .main-header-search {
-                @include oneQuarter;
+                flex: 1 85%;
+                @include displayFlex;
+                padding-bottom: 15px;
+                border-bottom: 1px solid lightgrey;
 
                 @media screen and (min-width: $medium) {
                    @include flexRow;
                  }
 
                 input {
+                    margin-left: auto;
                     margin-right: -30px;
                 }
                 button {
@@ -98,15 +115,24 @@
 
     .daily {
         @include displayFlex;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        border-top: .5px solid lightgrey;
+        border-bottom: .5px solid lightgrey;
 
         .widget-container-half {
             @include flexHalf;
             @include smallSidePadding;
+            padding-bottom: 50px;
+            padding-right: 50px;
+            padding-top: 50px;
 
             h3 {
                 @include smallMarginBottom;
+            }
+
+            &:first-of-type {
+                border-right: .5px solid lightgrey;
             }
 
             @media screen and (min-width: $small) {
@@ -131,8 +157,7 @@
         @include displayFlex;
         @include centerFlex;
         @include smallSidePadding;
-        margin-top: 50px * 2;
-        margin-bottom: 50px * 2;
+        padding: 7.5% 0;
 
         @media screen and (min-width: $small) {
             flex-direction: column;
@@ -144,7 +169,7 @@
         .social-container {
             flex: 1 30%;
             @include displayFlex;
-            border: 1px solid $color-1-hex;
+            border: 1px solid lightgrey;
             padding: 35px 2.5%;
             margin-right: 3%;
             border-radius: 10px;
@@ -183,6 +208,9 @@
 
         @include displayFlex;
         @include smallSidePadding;
+        padding-top: 5%;
+        border-bottom: .5px solid lightgrey;
+        border-top: .5px solid lightgrey;
 
         @media screen and (min-width: $small) {
             flex-direction: column;
@@ -196,6 +224,8 @@
             @include flexHalf;
            @include flexColumn;
            margin-bottom: 50px * 2;
+           padding: 0 5%;
+            border-right: .5px solid lightgrey;
 
            .text-1 {
                margin-bottom: 25px;
@@ -208,6 +238,7 @@
                 @include smallSidePadding;
                 @include microMarginBottom;
                 padding-right: 10%;
+
 
                 @media screen and (min-width: $small) {
                     flex-direction: column;
@@ -230,12 +261,17 @@
                        margin-left: 2.5%;
                        align-self: flex-start;
                      }
+                     @media screen and (min-width: $medium) {
+                        @include flexEnd;
+                    margin-left: auto;
+                      }
                 }
             }
         }
         section.activity {
             @include flexHalf;
             @include flexColumn;
+            padding: 0 5%;
 
             .text-1 {
                 margin-bottom: 25px;
@@ -282,6 +318,7 @@
         @include displayFlex;
         @include smallSidePadding;
         margin-bottom: 50px;
+        margin-top: 50px;
 
         @media screen and (min-width: $small) {
             flex-direction: column;
@@ -295,6 +332,8 @@
            @include smallSidePadding;
            @include microMarginBottom;
             padding-right: 5%;
+            padding: 0 5%;
+            border-right: .5px solid lightgrey;
 
             @media screen and (min-width: $small) {
                 margin-bottom: 50px;
@@ -348,6 +387,8 @@
             @include smallSidePadding;
             @include microMarginBottom;
             padding-right: 5%;
+            padding: 0 5%;
+            border-right: .5px solid lightgrey;
 
             h3 {
                 margin-bottom: 25px;
