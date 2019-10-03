@@ -364,7 +364,6 @@ input:checked + .slider:before {
 @media screen and (max-width: 768px) {
   * {
     border: none !important;
-    overflow: hidden;
   }
 }
 
