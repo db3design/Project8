@@ -246,13 +246,18 @@
         <section class="message">
             <h3 class="text-1">Message User</h3>
             
-            <form name="messageForm"  class="widget-container">
+            <form id="messageForm" class="widget-container">
+
                 <input type="text" placeholder="Search for user"
-            class="form-field" id="userField">
+            class="form-field" id="username" />
+
                 <textarea placeholder="Message for user" class="form-area"
             id= "messageField"></textarea>
-                <button class="button-primary" id="send" onclick="successMessage()">Send</button>
+
+                <button class="button-primary" id="sendButton">Send</button>
+
             </form>
+
         </section>
 
 
@@ -310,7 +315,5 @@
     <script src="js/mobileUsers.js"></script>
 
     <script src="js/submit.js"></script>
-
-    <script src="js/formValidation.js"></script>
 </body>
 </html>
